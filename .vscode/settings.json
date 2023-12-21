@@ -1,29 +1,13 @@
 {
     "files.exclude": {
-        "**/.git": true,
-        "**/.vs": true,
-        "**/.vscode": true,
-        "**/.history": true,
-        "**/*.js": {
-            "when": "$(basename).ts"
-        },
-        "**/node_modules": true,
-        "**/dist": true,
-        "**/e2e/build": true,
-        "src/app/environment.module.ts": true
+        "**/.git": false,
+        "**/.history": true
     },
     "search.exclude": {
         "**/.git": true,
         "**/.history": true,
         "**/.vs": true,
-        "**/.vscode": true,
-        "**/*.js": {
-            "when": "$(basename).ts"
-        },
-        "**/node_modules": true,
-        "**/dist": true,
-        "**/e2e/build": true,
-        "src/app/environment.module.ts": true
+        "**/node_modules": false
     },
     "editor.tabSize": 4,
     "editor.detectIndentation": false,

@@ -13,14 +13,14 @@ const functionConfig = {
         __dirname: false,
         __filename: false,
     },
+    devtool:false,
     entry: {
-        "publish/index": ["./examples/function/publish/index.ts"],
+        "publish/index": ["./examples/publisher/azure-function/publish/index.ts"],
         "publish/assets/styles/theme": [`./src/themes/website/styles/styles.scss`]
     },
     output: {
         filename: "./[name].js",
         path: path.resolve(__dirname, "dist/function"),
-        library: "function",
         libraryTarget: "commonjs2"
     },
     optimization: {
@@ -82,7 +82,7 @@ const functionConfig = {
         new MiniCssExtractPlugin({ filename: "[name].css", chunkFilename: "[id].css" }),
         new CopyWebpackPlugin({
             patterns: [
-                { from: `./examples/function`, to: `./` },
+                { from: `./examples/publisher/azure-function`, to: `./` },
                 { from: `./src/config.publish.json`, to: `./publish/config.json` },
                 { from: `./src/themes/website/styles/fonts`, to: "publish/assets/styles/fonts" }
             ]
